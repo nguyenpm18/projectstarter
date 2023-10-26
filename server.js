@@ -33,6 +33,7 @@ app.get('/filteredimage', async (req, res) => {
         });
 
     } catch (error) {
+        console.error("Error processing the image:", error);
         res.status(500).send({ message: 'Error processing the image.' });
     }
 });
